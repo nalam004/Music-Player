@@ -18,6 +18,7 @@
     background-image: 
         radial-gradient(at 47% 33%, hsl(221.56, 93%, 77%) 0, transparent 59%), 
         radial-gradient(at 82% 65%, hsl(196.22, 47%, 37%) 0, transparent 55%);
+    
   }
 
   svg {

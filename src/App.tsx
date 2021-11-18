@@ -12,10 +12,9 @@ function App() {
           style={{ backdropFilter: 'blur(5px)', }} >
 
           <img src={albumCover} alt="album art" />
-          <div id="song-details" className="p-3 text-center">
-              <p className="text-xs">Album</p>
-              <h1 className="text-2xl text-white font-bold tracking-wide">Current Song Playing</h1>
-              <p className="text-lg">Artist</p>
+          <div id="song-details" className="pt-3 text-center">
+              <h1 className="text-xl text-white font-bold tracking-wide">Current Song Playing</h1>
+              <p className="text-md text-gray-600 tracking-wide">Artist</p>
           </div>
           
           <div id="progress" className="w-4/5">
@@ -24,28 +23,28 @@ function App() {
                   <p className="end">3:00</p>
               </div>
               <div id="progress-bar" className="h-2 mt-3 bg-white rounded">
-                <div id="inner-bar" className="w-1/2 h-full bg-red-200 rounded rounded-r-none"></div>
+                <div id="inner-bar" className="w-1/2 h-full bg-pink-400 rounded rounded-r-none"></div>
               </div>
           </div>
           
-          <ul className="p-3">
-            <i style={{color: 'white'}} className="p-2 fas fa-random fa-sm" aria-hidden="true"></i>
-            <i style={{color: 'white'}} className="p-2 fas fa-step-backward" aria-hidden="true"></i>
-            <i style={{color: 'white'}} className="p-2 fas fa-play fa-lg" aria-hidden="true"></i>
-            <i style={{color: 'white'}} className="p-2 fas fa-step-forward"></i>
-            <i style={{color: 'white'}} className="p-2 fas fa-circle-notch fa-sm" aria-hidden="true"></i>    
+          <ul className="p-3 flex items-center">
+            <button id="shuffle" className="w-6 m-2"><img alt='' src="https://img.icons8.com/ios/250/ffffff/shuffle.png"/></button>
+            <button id="forward" className="w-6 m-2"><img alt='' src="https://img.icons8.com/ios/250/ffffff/skip-to-start.png"/></button>
+            <button id="play" className="w-10 m-2"><img alt='' src="https://img.icons8.com/ios/256/F472B6/circled-play--v1.png"/></button>
+            <button id="backward" className="w-6 m-2"><img alt='' src="https://img.icons8.com/ios/250/FFFFFF/end--v1.png"/></button>
+            <button id="repeat" className="w-6 m-2"><img alt='' src="https://img.icons8.com/ios/250/ffffff/recurring-appointment.png"/></button>    
           </ul>
         </div>
 
         <div id='playlist' className="flex-1 p-4 lg:p-6 overflow-y-auto overscroll-contain">
           {musicList.map((music, index) => (           
             <div key={index} className='flex border-b border-gray-800 items-center hover:bg-white hover:bg-opacity-25 hover:border-transparent'> 
-              <img className='p-3 w-16 h-16 rounded-md' src={albumCover} alt='album-cover' />
+              <img className='p-3 w-16 h-16 rounded-full' src={albumCover} alt='album-cover' />
               <div className="p-3 w-full">{music.song}</div>
               <div className="p-3 w-full">{music.artist}</div>
               <div className="p-3 w-full">{music.album}</div>
               <div className="p-3 w-full text-xs">{music.time}</div>
-              <div className="p-3 w-12 text-right"><button id="play"><i style={{color: 'white'}} className="fas fa-play"></i></button></div>              
+              <button id="play" className="m-3 w-36"><img alt='' src="https://img.icons8.com/ios/250/ffffff/play--v1.png"/></button>              
             </div>
           ))}
         </div>
