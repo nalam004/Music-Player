@@ -1,15 +1,15 @@
 export const musicList = [
     {
-      song: 'song',
-      artist: 'artist',
+      song: 'hello',
+      artist: 'adele',
       album: 'album',
       time: '2:56',
     },
     {
-        song: 'song',
-        artist: 'artist',
+        song: 'rolling in the deep',
+        artist: 'adele',
         album: 'album',
-        time: '2:56',
+        time: '3:56',
     },
     {
         song: 'song',
